@@ -10,7 +10,7 @@
                 <div class="col">
                     <div class="card p-2">
                         <div class="h4">
-                            <a href="{{ route('post', ['categoryId' => $category->id]) }}" class="text-decoration-none text-success">{{ $category->name }}</a>
+                            <a href="{{ route('post.index', ['categoryId' => $category->id]) }}" class="text-decoration-none text-success">{{ $category->name }}</a>
                              <span class="btn btn-success small">{{ $category->posts_count }}</span>
                         </div>
                     </div>

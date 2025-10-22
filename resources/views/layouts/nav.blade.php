@@ -13,10 +13,10 @@
                     <a class="nav-link  {{ Request::routeIs('home') ? 'active' : '' }}" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::routeIs('post') ? 'active' : '' }}" href="{{ route('post') }}">Posts</a>
+                    <a class="nav-link {{ Request::routeIs('post.index') ? 'active' : '' }}" href="{{ route('post.index') }}">Posts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::routeIs('user') ? 'active' : '' }}" href="{{ route('user') }}">Users</a>
+                    <a class="nav-link {{ Request::routeIs('user.index') ? 'active' : '' }}" href="{{ route('user.index') }}">Users</a>
                 </li>
             </ul>
         </div>

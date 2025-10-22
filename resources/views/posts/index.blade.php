@@ -8,7 +8,7 @@
         </div>
         <div class="row mt-5">
             <div class="col-3">
-                <form action="{{ route('post') }}" method="get">
+                <form action="{{ route('post.index') }}" method="get">
                     <label for="category" class="form-label">Category: </label><br>
                     <select class="form-select mt-1" name="categoryId" id="category">
                         <option value="">-</option>
@@ -20,7 +20,7 @@
                     </select>
                     <div class="mt-3">
                         <button type="submit" class="btn btn-success me-1">Submit</button>
-                        <button class="btn btn-danger"><a href="{{ route('post') }}"></a>Reset</button>
+                        <button class="btn btn-danger"><a href="{{ route('post.index') }}"></a>Reset</button>
                     </div>
                 </form>
             </div>
