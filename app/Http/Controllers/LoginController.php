@@ -21,13 +21,14 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('home')->with([
-                'success','Üstünlikli giriş!'
+
+            return redirect()->route('post.index')->with([
+                'success' => "Ustunlikli giris edildi"
             ]);
         }
 
         return back()->withErrors([
-            'username' => 'ullanyjy ýa-da parol ýalňyş!',
+            'username' => 'The provided credentials do not match our records.',
         ])->onlyInput('username');
     }
 

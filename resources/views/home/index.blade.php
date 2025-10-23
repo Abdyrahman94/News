@@ -2,20 +2,16 @@
 
 @section('content')
     <div class="container-lg">
-        <div class="h3 fw-bold text-success mt-5">
-            Categories
-        </div>
-        <div class="row row-cols-4 g-3 mt-2">
-            @foreach ($categories as $category)
-                <div class="col">
-                    <div class="card p-2">
-                        <div class="h4">
-                            <a href="{{ route('post.index', ['categoryId' => $category->id]) }}" class="text-decoration-none text-success">{{ $category->name }}</a>
-                             <span class="btn btn-success small">{{ $category->posts_count }}</span>
-                        </div>
-                    </div>
+        <div class="d-flex align-items-center justify-content-center" style="height: 70vh;">
+            <div class="">
+                <div class="display-3 text-success fw-bold">
+                    News Portal
                 </div>
-            @endforeach
+                <div class="d-flex justify-content-center mt-2 ">
+                    <a href="{{ route('login') }}" class="btn btn-primary"><span class="bi-box-arrow-in-right me-2"></span>Login</a>
+                    <a href="{{ route('register') }}" class="btn btn-warning ms-2">Register Now <span class="bi-person-plus"></span></a>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

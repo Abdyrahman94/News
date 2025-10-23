@@ -19,9 +19,9 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
         User::factory()->create([
-            'username' => 'Abdyrahman94',
-            'firstname' => 'Abdyrahman',
-            'lastname' => 'Rejepov',
+            'username' => 'user',
+            // 'firstname' => 'Abdyrahman',
+            // 'lastname' => 'Rejepov',
         ]);
 
         $this->call([ CategorySeeder::class,]);

@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
+    @include('alert.app')
+    <form action="{{ route('logout') }}" method="post" class="text-end mt-2 me-5">
+        @csrf
+        <input type="hidden">
+        <button type="submit" class="btn btn-danger border-2"><span class="bi bi-box-arrow-left me-2"></span>LogOut</button>
+    </form>
     <div class="container-lg">
         <div class="h3 fw-bold text-success mt-5">
             Posts
@@ -30,19 +35,19 @@
                         <div class="col">
                             <div class="border border-success rounded-3 p-3 h-100">
                                 <div class="text-success">
-                                    <span class="fw-bold">Title: </span> {{ $post->title}}
+                                    <span class="fw-bold">Title: </span> {{ $post->title }}
                                 </div>
                                 <div class="text-primary small">
-                                    <span class="fw-bold">Category_id: </span> {{ $post->category_id}}
+                                    <span class="fw-bold">Category_id: </span> {{ $post->category_id }}
                                 </div>
                                 <div class="text-warning small">
-                                    <span class="fw-bold">View_count: </span> {{ $post->view_count}}
+                                    <span class="fw-bold">View_count: </span> {{ $post->view_count }}
                                 </div>
                                 <div class="text-info small">
-                                    <span class="fw-bold">like_count: </span> {{ $post->like_count}}
+                                    <span class="fw-bold">like_count: </span> {{ $post->like_count }}
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     @endforeach
                 </div>
                 <div class="mt-4 text-success">
@@ -52,5 +57,4 @@
         </div>
 
     </div>
-
 @endsection
